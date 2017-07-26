@@ -1,12 +1,21 @@
 const readline = require('readline');
 
-let createBasicCard = (dB, spec) => {
-  let that;
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    prompt: 'Would you like to create a basic flash card? > y/n ',
+});
 
+const createBasicCard = (dB, spec) => {
+    const that = {};
+    const mysql = dB;
 
+    function determineCardQuestion() {
 
-  that = {};
-  return that;
+    }
+    that.determineCardQuestion = determineCardQuestion;
+
+    return that;
 }
 
 module.exports = createBasicCard;

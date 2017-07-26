@@ -16,16 +16,16 @@ let clozeDeleted = "Would you like to create a Cloze Deleted Flash card? y/n ";
 rl.prompt();
 
 rl.on('line', (line) => {
-  switch (line.trim()) {
+    switch (line.trim()) {
     case 'y':
-      console.log('CREATE THE BASIC CARD', createBasicFlash);
+        console.log('CREATE THE BASIC CARD', createBasicFlash);
 
-      break;
+        break;
     case 'n': {
-    return  rl.question(clozeDeleted, (answer) => {
-        if (answer === 'y') {
-          console.log("WHAT IS THE CLozeeee", createCloze);
-        }
+        return rl.question(clozeDeleted, (answer) => {
+            if (answer === 'y') {
+                console.log("WHAT IS THE CLozeeee", createCloze);
+            }
 
         rl.clearLine(answer, 1)
         rl.close()
